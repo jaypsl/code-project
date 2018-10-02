@@ -15,11 +15,14 @@ class Character extends Component {
     render() {
         return (
             <div className="character">
-            <table><tbody>
+            <table>
+                <thead className="thead-dark">
                 <tr>
                     <th>Title</th>
                     <th>Release Date</th>
                 </tr>
+                </thead>
+                <tbody className="tbody-light">
                 {this.props.films.map((f, index) => {
                     return <tr key={index}>
                         <td>{f.title}</td>
